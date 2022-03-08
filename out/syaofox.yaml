@@ -1630,8 +1630,186 @@ proxy-groups:
   - 节点选择
   - 全球直连
   - 自动选择
-- name: Github
+  - lisa-US
+  - 香港 01 HK
+  - 香港 02 HK
+  - 香港 03 HK
+  - 香港 04 HK
+  - 香港 05 HK
+  - 香港 06 HK
+  - 香港 07 HK
+  - 香港 08 HK
+  - 香港 09 HK
+  - 香港 10 HK
+  - 香港 11 HK
+  - 香港 12 HK
+  - 香港 13 HK
+  - 香港 14 HK
+  - 香港家宽 HK
+  - 澳门商宽 MO
+  - 澳门家宽 MO
+  - 台湾 01 TW
+  - 台湾 02 TW
+  - 台湾 03 TW
+  - 台湾 04 TW
+  - 台湾 05 TW
+  - 台湾 06 TW
+  - 台湾 07 TW
+  - 台湾 08 TW
+  - 台湾 09 TW
+  - 台湾 10 TW
+  - 台湾 11 TW
+  - 台湾 12 TW
+  - 台湾 13 TW
+  - 台湾 14 TW
+  - 台湾 15 TW
+  - 台湾 16 TW
+  - 新加坡 01 SG
+  - 新加坡 02 SG
+  - 新加坡 03 SG
+  - 新加坡 04 SG
+  - 新加坡 05 SG
+  - 新加坡 06 SG
+  - 新加坡 07 SG
+  - 新加坡 08 SG
+  - 新加坡 09 SG
+  - 新加坡 10 SG
+  - 新加坡 11 SG
+  - 新加坡 12 SG
+  - 新加坡家宽 SG
+  - 新加坡商宽 SG
+  - 马来西亚 01 MY
+  - 马来西亚 02 MY
+  - 马来西亚 03 MY
+  - 马来西亚 04 MY
+  - 马来西亚 05 MY
+  - 马来西亚家宽 MY
+  - 泰国 01 TH
+  - 泰国 02 TH
+  - 日本 01 JP
+  - 日本 02 JP
+  - 日本 03 JP
+  - 日本 04 JP
+  - 日本 05 JP
+  - 日本 06 JP
+  - 日本 07 JP
+  - 日本 08 JP
+  - 日本 09 JP
+  - 日本 10 JP
+  - 日本 11 JP
+  - 日本 12 JP
+  - 日本 13 JP
+  - 日本 14 JP
+  - 日本 15 JP
+  - 日本 16 JP
+  - 日本 17 JP
+  - 韩国 01 KR
+  - 韩国 02 KR
+  - 韩国 03 KR
+  - 韩国 04 KR
+  - 越南 VN
+  - 越南家宽 VN
+  - 菲律宾 01 PH
+  - 菲律宾 02 PH
+  - 印度尼西亚 01 棉兰 ID
+  - 印度尼西亚 02 雅加达 ID
+  - 印度 01 孟买 IN
+  - 印度 02 新德里 IN
+  - 柬埔寨 KH
+  - 蒙古 MN
+  - 约旦 JO
+  - 伊朗 IR
+  - 以色列 IL
+  - 土耳其 TR
+  - 尼泊尔 NP
+  - 孟加拉国 BD
+  - 阿塞拜疆 AZ
+  - 格鲁吉亚 GE
+  - 巴基斯坦 01 PK
+  - 巴基斯坦 02 PK
+  - 沙特阿拉伯 SA
+  - 哈萨克斯坦 KZ
+  - 吉尔吉斯斯坦 KG
+  - 阿拉伯联合酋长国 AE
+  - 澳大利亚 01 悉尼 AU
+  - 澳大利亚 02 布里斯班 AU
+  - 新西兰 NZ
+  - 法国 FR
+  - 英国 01 GB
+  - 英国 02 GB
+  - 英国家宽 GB
+  - 马恩岛 IM
+  - 德国 01 DE
+  - 德国 02 DE
+  - 丹麦 DK
+  - 挪威 NO
+  - 瑞典 SE
+  - 芬兰 FI
+  - 冰岛 IS
+  - 瑞士 CH
+  - 捷克 CZ
+  - 希腊 GR
+  - 荷兰 NL
+  - 波兰 PL
+  - 俄罗斯 01 莫斯科 RU
+  - 俄罗斯 02 库页岛 RU
+  - 乌克兰 UA
+  - 匈牙利 HU
+  - 卢森堡 LU
+  - 奥地利 AT
+  - 意大利 IT
+  - 比利时 BE
+  - 爱尔兰 IE
+  - 立陶宛 LT
+  - 西班牙ES
+  - 葡萄牙 PT
+  - 保加利亚 BG
+  - 克罗地亚 HR
+  - 北马其顿 MK
+  - 塞尔维亚 RS
+  - 塞浦路斯 CY
+  - 拉脱维亚 LV
+  - 摩尔多瓦 MD
+  - 斯洛伐克 SK
+  - 爱沙尼亚 EE
+  - 白俄罗斯 BY
+  - 罗马尼亚 RO
+  - 斯洛文尼亚 SI
+  - 阿尔巴尼亚 AL
+  - 波黑共和国 BA
+  - 美国 01 费城 US
+  - 美国 02 纽约 US
+  - 美国 03 芝加哥 US
+  - 美国 04 圣何塞 US
+  - 美国 05 迈阿密 US
+  - 美国 06 斯波坎 US
+  - 美国 07 达拉斯 US
+  - 美国 08 底特律 US
+  - 美国 09 密尔沃基 US
+  - 美国 10 圣克拉拉 US
+  - 加拿大 01 多伦多 CA
+  - 加拿大 02 温哥华 CA
+  - 加拿大 03 哈利法克斯 CA
+  - 加拿大家宽 CA
+  - 墨西哥 MX
+  - 巴拿马 PA
+  - 哥斯达黎加 CR
+  - 巴西 BR
+  - 智利 CL
+  - 秘鲁 PE
+  - 阿根廷 AR
+  - 乌拉圭 UY
+  - 哥伦比亚 CO
+  - 委内瑞拉 VE
+  - 埃及 EG
+  - 南非 ZA
+  - 摩洛哥 MA
+  - 突尼斯 TN
+  - 肯尼亚 KE
+  - 尼日利亚 NG
+- name: directsite
   type: select
+  disable-udp: false
   proxies:
   - 节点选择
   - 全球直连
@@ -1813,8 +1991,9 @@ proxy-groups:
   - 突尼斯 TN
   - 肯尼亚 KE
   - 尼日利亚 NG
-- name: DMM
+- name: proxysite
   type: select
+  disable-udp: false
   proxies:
   - 节点选择
   - 全球直连
@@ -1996,12 +2175,14 @@ proxy-groups:
   - 突尼斯 TN
   - 肯尼亚 KE
   - 尼日利亚 NG
-- name: Steam
+- name: rejectsite
   type: select
   disable-udp: false
   proxies:
-  - 全球直连
+  - 全球拦截
   - 节点选择
+  - 全球直连
+  - 自动选择
   - lisa-US
   - 香港 01 HK
   - 香港 02 HK
@@ -2179,12 +2360,13 @@ proxy-groups:
   - 突尼斯 TN
   - 肯尼亚 KE
   - 尼日利亚 NG
-- name: Microsoft
+- name: telegramcidr
   type: select
   disable-udp: false
   proxies:
-  - 全球直连
   - 节点选择
+  - 全球直连
+  - 自动选择
   - lisa-US
   - 香港 01 HK
   - 香港 02 HK
@@ -2362,12 +2544,13 @@ proxy-groups:
   - 突尼斯 TN
   - 肯尼亚 KE
   - 尼日利亚 NG
-- name: Bilibili
+- name: apple
   type: select
   disable-udp: false
   proxies:
-  - 全球直连
   - 节点选择
+  - 全球直连
+  - 自动选择
   - lisa-US
   - 香港 01 HK
   - 香港 02 HK
@@ -2545,12 +2728,13 @@ proxy-groups:
   - 突尼斯 TN
   - 肯尼亚 KE
   - 尼日利亚 NG
-- name: Pornhub
+- name: icloud
   type: select
   disable-udp: false
   proxies:
-  - 全球直连
   - 节点选择
+  - 全球直连
+  - 自动选择
   - lisa-US
   - 香港 01 HK
   - 香港 02 HK
@@ -2728,12 +2912,13 @@ proxy-groups:
   - 突尼斯 TN
   - 肯尼亚 KE
   - 尼日利亚 NG
-- name: YouTube
+- name: gfw
   type: select
   disable-udp: false
   proxies:
-  - 全球直连
   - 节点选择
+  - 全球直连
+  - 自动选择
   - lisa-US
   - 香港 01 HK
   - 香港 02 HK
@@ -2911,12 +3096,13 @@ proxy-groups:
   - 突尼斯 TN
   - 肯尼亚 KE
   - 尼日利亚 NG
-- name: Apple
+- name: greatfire
   type: select
   disable-udp: false
   proxies:
-  - 全球直连
   - 节点选择
+  - 全球直连
+  - 自动选择
   - lisa-US
   - 香港 01 HK
   - 香港 02 HK
@@ -3094,12 +3280,197 @@ proxy-groups:
   - 突尼斯 TN
   - 肯尼亚 KE
   - 尼日利亚 NG
-- name: JAV
+- name: tld-not-cn
   type: select
   disable-udp: false
   proxies:
-  - 全球直连
   - 节点选择
+  - 全球直连
+  - 自动选择
+  - lisa-US
+  - 香港 01 HK
+  - 香港 02 HK
+  - 香港 03 HK
+  - 香港 04 HK
+  - 香港 05 HK
+  - 香港 06 HK
+  - 香港 07 HK
+  - 香港 08 HK
+  - 香港 09 HK
+  - 香港 10 HK
+  - 香港 11 HK
+  - 香港 12 HK
+  - 香港 13 HK
+  - 香港 14 HK
+  - 香港家宽 HK
+  - 澳门商宽 MO
+  - 澳门家宽 MO
+  - 台湾 01 TW
+  - 台湾 02 TW
+  - 台湾 03 TW
+  - 台湾 04 TW
+  - 台湾 05 TW
+  - 台湾 06 TW
+  - 台湾 07 TW
+  - 台湾 08 TW
+  - 台湾 09 TW
+  - 台湾 10 TW
+  - 台湾 11 TW
+  - 台湾 12 TW
+  - 台湾 13 TW
+  - 台湾 14 TW
+  - 台湾 15 TW
+  - 台湾 16 TW
+  - 新加坡 01 SG
+  - 新加坡 02 SG
+  - 新加坡 03 SG
+  - 新加坡 04 SG
+  - 新加坡 05 SG
+  - 新加坡 06 SG
+  - 新加坡 07 SG
+  - 新加坡 08 SG
+  - 新加坡 09 SG
+  - 新加坡 10 SG
+  - 新加坡 11 SG
+  - 新加坡 12 SG
+  - 新加坡家宽 SG
+  - 新加坡商宽 SG
+  - 马来西亚 01 MY
+  - 马来西亚 02 MY
+  - 马来西亚 03 MY
+  - 马来西亚 04 MY
+  - 马来西亚 05 MY
+  - 马来西亚家宽 MY
+  - 泰国 01 TH
+  - 泰国 02 TH
+  - 日本 01 JP
+  - 日本 02 JP
+  - 日本 03 JP
+  - 日本 04 JP
+  - 日本 05 JP
+  - 日本 06 JP
+  - 日本 07 JP
+  - 日本 08 JP
+  - 日本 09 JP
+  - 日本 10 JP
+  - 日本 11 JP
+  - 日本 12 JP
+  - 日本 13 JP
+  - 日本 14 JP
+  - 日本 15 JP
+  - 日本 16 JP
+  - 日本 17 JP
+  - 韩国 01 KR
+  - 韩国 02 KR
+  - 韩国 03 KR
+  - 韩国 04 KR
+  - 越南 VN
+  - 越南家宽 VN
+  - 菲律宾 01 PH
+  - 菲律宾 02 PH
+  - 印度尼西亚 01 棉兰 ID
+  - 印度尼西亚 02 雅加达 ID
+  - 印度 01 孟买 IN
+  - 印度 02 新德里 IN
+  - 柬埔寨 KH
+  - 蒙古 MN
+  - 约旦 JO
+  - 伊朗 IR
+  - 以色列 IL
+  - 土耳其 TR
+  - 尼泊尔 NP
+  - 孟加拉国 BD
+  - 阿塞拜疆 AZ
+  - 格鲁吉亚 GE
+  - 巴基斯坦 01 PK
+  - 巴基斯坦 02 PK
+  - 沙特阿拉伯 SA
+  - 哈萨克斯坦 KZ
+  - 吉尔吉斯斯坦 KG
+  - 阿拉伯联合酋长国 AE
+  - 澳大利亚 01 悉尼 AU
+  - 澳大利亚 02 布里斯班 AU
+  - 新西兰 NZ
+  - 法国 FR
+  - 英国 01 GB
+  - 英国 02 GB
+  - 英国家宽 GB
+  - 马恩岛 IM
+  - 德国 01 DE
+  - 德国 02 DE
+  - 丹麦 DK
+  - 挪威 NO
+  - 瑞典 SE
+  - 芬兰 FI
+  - 冰岛 IS
+  - 瑞士 CH
+  - 捷克 CZ
+  - 希腊 GR
+  - 荷兰 NL
+  - 波兰 PL
+  - 俄罗斯 01 莫斯科 RU
+  - 俄罗斯 02 库页岛 RU
+  - 乌克兰 UA
+  - 匈牙利 HU
+  - 卢森堡 LU
+  - 奥地利 AT
+  - 意大利 IT
+  - 比利时 BE
+  - 爱尔兰 IE
+  - 立陶宛 LT
+  - 西班牙ES
+  - 葡萄牙 PT
+  - 保加利亚 BG
+  - 克罗地亚 HR
+  - 北马其顿 MK
+  - 塞尔维亚 RS
+  - 塞浦路斯 CY
+  - 拉脱维亚 LV
+  - 摩尔多瓦 MD
+  - 斯洛伐克 SK
+  - 爱沙尼亚 EE
+  - 白俄罗斯 BY
+  - 罗马尼亚 RO
+  - 斯洛文尼亚 SI
+  - 阿尔巴尼亚 AL
+  - 波黑共和国 BA
+  - 美国 01 费城 US
+  - 美国 02 纽约 US
+  - 美国 03 芝加哥 US
+  - 美国 04 圣何塞 US
+  - 美国 05 迈阿密 US
+  - 美国 06 斯波坎 US
+  - 美国 07 达拉斯 US
+  - 美国 08 底特律 US
+  - 美国 09 密尔沃基 US
+  - 美国 10 圣克拉拉 US
+  - 加拿大 01 多伦多 CA
+  - 加拿大 02 温哥华 CA
+  - 加拿大 03 哈利法克斯 CA
+  - 加拿大家宽 CA
+  - 墨西哥 MX
+  - 巴拿马 PA
+  - 哥斯达黎加 CR
+  - 巴西 BR
+  - 智利 CL
+  - 秘鲁 PE
+  - 阿根廷 AR
+  - 乌拉圭 UY
+  - 哥伦比亚 CO
+  - 委内瑞拉 VE
+  - 埃及 EG
+  - 南非 ZA
+  - 摩洛哥 MA
+  - 突尼斯 TN
+  - 肯尼亚 KE
+  - 尼日利亚 NG
+- name: applications
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
   - lisa-US
   - 香港 01 HK
   - 香港 02 HK
@@ -3279,138 +3650,78 @@ proxy-groups:
   - 尼日利亚 NG
 rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- RULE-SET,LocalAreaNetwork,全球直连
-- RULE-SET,Bilibili,Bilibili
-- RULE-SET,Steam,Steam
-- RULE-SET,Microsoft,Microsoft
-- RULE-SET,Github,Github
-- RULE-SET,Pornhub,Pornhub
-- RULE-SET,YouTube,YouTube
-- RULE-SET,Apple,Apple
-- RULE-SET,DMM,DMM
-- RULE-SET,JAV,JAV
-- RULE-SET,UnBan,全球直连
-- RULE-SET,BanAD,全球拦截
-- RULE-SET,BanProgramAD,全球拦截
-- RULE-SET,GoogleCN,全球直连
-- RULE-SET,Telegram,节点选择
-- RULE-SET,ProxyMedia,节点选择
-- RULE-SET,ProxyLite,节点选择
-- RULE-SET,ChinaDomain,全球直连
-- RULE-SET,ChinaCompanyIp,全球直连
+- RULE-SET,lancidr,全球直连
+- RULE-SET,cncidr,全球直连
+- RULE-SET,private,全球直连
+- RULE-SET,rejectsite,rejectsite
+- RULE-SET,telegramcidr,telegramcidr
+- RULE-SET,apple,apple
+- RULE-SET,icloud,icloud
+- RULE-SET,gfw,gfw
+- RULE-SET,greatfire,greatfire
+- RULE-SET,tld-not-cn,tld-not-cn
+- RULE-SET,applications,applications
+
+
+- RULE-SET,directsite,directsite
+- RULE-SET,proxysite,proxysite
 - GEOIP,CN,全球直连
 - MATCH,漏网之鱼
 rule-providers:
-  JAV:
-    type: http
-    behavior: classical
-    url: https://gitee.com/syaofox/rule/raw/main/Clash/Provider/JAV.yaml
-    path: "./rule_provider/JAV.yaml"
-    interval: 86400
-  Github:
+  lancidr:
+    type: file
+    behavior: ipcidr
+    path: "./rule_provider/ipcidr/lancidr.txt"
+  cncidr:
+    type: file
+    behavior: ipcidr
+    path: "./rule_provider/ipcidr/cncidr.txt"
+  private:
+    type: file
+    behavior: domain
+    path: "./rule_provider/domain/private.txt"
+  telegramcidr:
+    type: file
+    behavior: ipcidr
+    path: "./rule_provider/ipcidr/telegramcidr.txt"  
+  rejectsite:
+    type: file
+    behavior: domain
+    path: "./rule_provider/domain/reject.txt"
+  directsite:
+    type: file
+    behavior: domain
+    path: "./rule_provider/domain/direct.txt"
+  proxysite:
+    type: file
+    behavior: domain
+    path: "./rule_provider/domain/proxy.txt"
+  apple:
+    type: file
+    behavior: domain
+    path: "./rule_provider/domain/apple.txt"
+  icloud:
+    type: file
+    behavior: domain
+    path: "./rule_provider/domain/icloud.txt"
+  gfw:
+    type: file
+    behavior: domain
+    path: "./rule_provider/domain/gfw.txt"
+  greatfire:
+    type: file
+    behavior: domain
+    path: "./rule_provider/domain/greatfire.txt"
+  tld-not-cn:
+    type: file
+    behavior: domain
+    path: "./rule_provider/domain/tld-not-cn.txt"
+
+  applications:
     type: file
     behavior: classical
-    path: "./rule_provider/Github.yaml"
-  DMM:
-    type: file
-    behavior: classical
-    path: "./rule_provider/dmm.yaml"
-  Steam:
-    type: http
-    behavior: classical
-    url: https://gitee.com/syaofox/rule/raw/main/Clash/Provider/Steam.yaml
-    path: "./rule_provider/Steam.yaml"
-    interval: 86400
-  Bilibili:
-    type: http
-    behavior: classical
-    url: https://gitee.com/syaofox/rule/raw/main/Clash/Provider/Media/Bilibili.yaml
-    path: "./rule_provider/Bilibili.yaml"
-    interval: 86400
-  Pornhub:
-    type: http
-    behavior: classical
-    url: https://gitee.com/syaofox/rule/raw/main/Clash/Provider/Media/Pornhub.yaml
-    path: "./rule_provider/Pornhub.yaml"
-    interval: 86400
-  YouTube:
-    type: http
-    behavior: classical
-    url: https://gitee.com/syaofox/rule/raw/main/Clash/Provider/Media/YouTube.yaml
-    path: "./rule_provider/YouTube.yaml"
-    interval: 86400
-  Microsoft:
-    type: http
-    behavior: classical
-    url: https://gitee.com/syaofox/rule/raw/main/Clash/Provider/Microsoft.yaml
-    path: "./rule_provider/Microsoft.yaml"
-    interval: 86400
-  Apple:
-    type: http
-    behavior: classical
-    url: https://gitee.com/syaofox/rule/raw/main/Clash/Provider/Apple.yaml
-    path: "./rule_provider/Apple.yaml"
-    interval: 86400
-  LocalAreaNetwork:
-    type: http
-    behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvTG9jYWxBcmVhTmV0d29yay5saXN0
-    path: "./rule_provider/rule-provider_LocalAreaNetwork.yaml"
-    interval: 86400
-  UnBan:
-    type: http
-    behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvVW5CYW4ubGlzdA
-    path: "./rule_provider/rule-provider_UnBan.yaml"
-    interval: 86400
-  BanAD:
-    type: http
-    behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQmFuQUQubGlzdA
-    path: "./rule_provider/rule-provider_BanAD.yaml"
-    interval: 86400
-  BanProgramAD:
-    type: http
-    behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQmFuUHJvZ3JhbUFELmxpc3Q
-    path: "./rule_provider/rule-provider_BanProgramAD.yaml"
-    interval: 86400
-  GoogleCN:
-    type: http
-    behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvR29vZ2xlQ04ubGlzdA
-    path: "./rule_provider/rule-provider_GoogleCN.yaml"
-    interval: 86400
-  Telegram:
-    type: http
-    behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvVGVsZWdyYW0ubGlzdA
-    path: "./rule_provider/rule-provider_Telegram.yaml"
-    interval: 86400
-  ProxyMedia:
-    type: http
-    behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlNZWRpYS5saXN0
-    path: "./rule_provider/rule-provider_ProxyMedia.yaml"
-    interval: 86400
-  ProxyLite:
-    type: http
-    behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlMaXRlLmxpc3Q
-    path: "./rule_provider/rule-provider_ProxyLite.yaml"
-    interval: 86400
-  ChinaDomain:
-    type: http
-    behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQ2hpbmFEb21haW4ubGlzdA
-    path: "./rule_provider/rule-provider_ChinaDomain.yaml"
-    interval: 86400
-  ChinaCompanyIp:
-    type: http
-    behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQ2hpbmFDb21wYW55SXAubGlzdA
-    path: "./rule_provider/rule-provider_ChinaCompanyIp.yaml"
-    interval: 86400
+    path: "./rule_provider/domain/applications.txt"
+  
 dns:
   enable: true
   ipv6: false
@@ -3429,14 +3740,8 @@ dns:
   - dhcp://"eth4"
   - 114.114.114.114
   - 119.29.29.29
-  - https://doh.pub/dns-query
-  - https://dns.alidns.com/dns-query
   fallback:
-  - https://dns.cloudflare.com/dns-query
   - "[2001:da8::666]:53"
-  - https://public.dns.iij.jp/dns-query
-  - https://jp.tiar.app/dns-query
-  - https://jp.tiarap.org/dns-query
   - tls://dot.tiar.app
 redir-port: 7892
 tproxy-port: 7895
