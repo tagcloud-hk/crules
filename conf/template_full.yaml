@@ -31,99 +31,34 @@ proxy-groups:
   proxies:
   - REJECT
   - DIRECT
+- name: 漏网之鱼
+  type: select
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: directsite
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: proxysite
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
 - name: rejectsite
   type: select
   disable-udp: false
   proxies:
   - 全球拦截
-  - 节点选择
-  - 全球直连
-  - 自动选择
-{{data.proxy_groups}}
-- name: whitelist
-  type: select
-  disable-udp: false
-  proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
-{{data.proxy_groups}}
-- name: bilibili
-  type: select
-  disable-udp: false
-  proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
-{{data.proxy_groups}}
-- name: steam
-  type: select
-  disable-udp: false
-  proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
-{{data.proxy_groups}}
-- name: github
-  type: select
-  disable-udp: false
-  proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
-{{data.proxy_groups}}
-- name: youtube
-  type: select
-  disable-udp: false
-  proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
-{{data.proxy_groups}}
-- name: microsoft
-  type: select
-  disable-udp: false
-  proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
-{{data.proxy_groups}}
-- name: dmm
-  type: select
-  disable-udp: false
-  proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
-{{data.proxy_groups}}
-- name: jav
-  type: select
-  disable-udp: false
-  proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
-{{data.proxy_groups}}
-- name: acg
-  type: select
-  disable-udp: false
-  proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
-{{data.proxy_groups}}
-- name: pornhub
-  type: select
-  disable-udp: false
-  proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
-{{data.proxy_groups}}
-- name: applications
-  type: select
-  disable-udp: false
-  proxies:
   - 节点选择
   - 全球直连
   - 自动选择
@@ -168,7 +103,7 @@ proxy-groups:
   - 全球直连
   - 自动选择
 {{data.proxy_groups}}
-- name: directsite
+- name: tld-not-cn
   type: select
   disable-udp: false
   proxies:
@@ -176,8 +111,89 @@ proxy-groups:
   - 全球直连
   - 自动选择
 {{data.proxy_groups}}
-- name: 漏网之鱼
+- name: applications
   type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: whitelist
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: bilibili
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: dmm
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: github
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: jav
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: microsoft
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: pornhub
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: steam
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: youtube
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: acg
+  type: select
+  disable-udp: false
   proxies:
   - 节点选择
   - 全球直连
@@ -206,6 +222,8 @@ rules:
 - RULE-SET,gfw,gfw
 - RULE-SET,greatfire,greatfire
 - RULE-SET,directsite,directsite
+- RULE-SET,proxysite,proxysite
+- RULE-SET,tld-not-cn,tld-not-cn
 - GEOIP,CN,全球直连
 - MATCH,漏网之鱼
 rule-providers:
@@ -233,6 +251,10 @@ rule-providers:
     type: file
     behavior: domain
     path: "./rule_provider/domain/direct.txt"
+  proxysite:
+    type: file
+    behavior: domain
+    path: "./rule_provider/domain/proxy.txt"
   apple:
     type: file
     behavior: domain
@@ -249,6 +271,11 @@ rule-providers:
     type: file
     behavior: domain
     path: "./rule_provider/domain/greatfire.txt"
+  tld-not-cn:
+    type: file
+    behavior: domain
+    path: "./rule_provider/domain/tld-not-cn.txt"
+
   applications:
     type: file
     behavior: classical
