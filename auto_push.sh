@@ -1,6 +1,9 @@
 #!/bin/bash
 git submodule update --remote
 
+# classical
+cp clash-rules/applications.txt classical/applications.txt
+
 # ipcidr
 cp clash-rules/cncidr.txt ipcidr/cncidr.txt
 cp clash-rules/lancidr.txt ipcidr/lancidr.txt
@@ -8,7 +11,6 @@ cp clash-rules/telegramcidr.txt ipcidr/telegramcidr.txt
 
 # domain
 cp clash-rules/apple.txt domain/apple.txt
-cp clash-rules/applications.txt domain/applications.txt
 cp clash-rules/direct.txt domain/direct.txt
 cp clash-rules/gfw.txt domain/gfw.txt
 cp clash-rules/google.txt domain/google.txt

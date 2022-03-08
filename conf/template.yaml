@@ -119,12 +119,93 @@ proxy-groups:
   - 全球直连
   - 自动选择
 {{data.proxy_groups}}
+- name: whitelist
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: bilibili
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: dmm
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: github
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: jav
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: microsoft
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: pornhub
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: steam
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: youtube
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
 rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - RULE-SET,lancidr,全球直连
 - RULE-SET,cncidr,全球直连
 - RULE-SET,private,全球直连
 - RULE-SET,rejectsite,rejectsite
+- RULE-SET,whitelist,whitelist
+- RULE-SET,bilibili,bilibili
+- RULE-SET,steam,steam
+- RULE-SET,github,github
+- RULE-SET,youtube,youtube
+- RULE-SET,microsoft,microsoft
+- RULE-SET,dmm,dmm
+- RULE-SET,jav,jav
+- RULE-SET,pornhub,pornhub
 - RULE-SET,applications,applications
 - RULE-SET,telegramcidr,telegramcidr
 - RULE-SET,apple,apple
@@ -189,7 +270,43 @@ rule-providers:
   applications:
     type: file
     behavior: classical
-    path: "./rule_provider/domain/applications.txt"
+    path: "./rule_provider/classical/applications.txt"
+  whitelist:
+    type: file
+    behavior: classical
+    path: "./rule_provider/classical/whitelist.yaml"
+  bilibili:
+    type: file
+    behavior: classical
+    path: "./rule_provider/classical/bilibili.yaml"
+  dmm:
+    type: file
+    behavior: classical
+    path: "./rule_provider/classical/dmm.yaml"
+  github:
+    type: file
+    behavior: classical
+    path: "./rule_provider/classical/github.yaml"
+  jav:
+    type: file
+    behavior: classical
+    path: "./rule_provider/classical/jav.yaml"
+  microsoft:
+    type: file
+    behavior: classical
+    path: "./rule_provider/classical/microsoft.yaml"
+  pornhub:
+    type: file
+    behavior: classical
+    path: "./rule_provider/classical/pornhub.yaml"
+  steam:
+    type: file
+    behavior: classical
+    path: "./rule_provider/classical/steam.yaml"
+  youtube:
+    type: file
+    behavior: classical
+    path: "./rule_provider/classical/youtube.yaml"
   
 dns:
   enable: true
