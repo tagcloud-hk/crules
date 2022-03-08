@@ -1,0 +1,277 @@
+---
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: silent
+external-controller: 0.0.0.0:9090
+proxies:
+{{data.proxies}}
+proxy-groups:
+- name: 节点选择
+  type: select
+  proxies:
+  - 自动选择
+  - DIRECT
+{{data.proxy_groups}}
+- name: 自动选择
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+{{data.proxy_groups}}
+- name: 全球直连
+  type: select
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+- name: 全球拦截
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+- name: 漏网之鱼
+  type: select
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+- name: Github
+  type: select
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: DMM
+  type: select
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: Steam
+  type: select
+  disable-udp: false
+  proxies:
+  - 全球直连
+  - 节点选择
+{{data.proxy_groups}}
+- name: Microsoft
+  type: select
+  disable-udp: false
+  proxies:
+  - 全球直连
+  - 节点选择
+{{data.proxy_groups}}
+- name: Bilibili
+  type: select
+  disable-udp: false
+  proxies:
+  - 全球直连
+  - 节点选择
+{{data.proxy_groups}}
+- name: Pornhub
+  type: select
+  disable-udp: false
+  proxies:
+  - 全球直连
+  - 节点选择
+{{data.proxy_groups}}
+- name: YouTube
+  type: select
+  disable-udp: false
+  proxies:
+  - 全球直连
+  - 节点选择
+{{data.proxy_groups}}
+- name: Apple
+  type: select
+  disable-udp: false
+  proxies:
+  - 全球直连
+  - 节点选择
+{{data.proxy_groups}}
+- name: JAV
+  type: select
+  disable-udp: false
+  proxies:
+  - 全球直连
+  - 节点选择
+{{data.proxy_groups}}
+rules:
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+
+- RULE-SET,lancidr,全球直连
+
+
+- RULE-SET,Bilibili,Bilibili
+- RULE-SET,Steam,Steam
+- RULE-SET,Microsoft,Microsoft
+- RULE-SET,Github,Github
+- RULE-SET,Pornhub,Pornhub
+- RULE-SET,YouTube,YouTube
+- RULE-SET,Apple,Apple
+- RULE-SET,DMM,DMM
+- RULE-SET,JAV,JAV
+- RULE-SET,UnBan,全球直连
+- RULE-SET,BanAD,全球拦截
+- RULE-SET,BanProgramAD,全球拦截
+- RULE-SET,GoogleCN,全球直连
+- RULE-SET,Telegram,节点选择
+- RULE-SET,ProxyMedia,节点选择
+- RULE-SET,ProxyLite,节点选择
+- RULE-SET,ChinaDomain,全球直连
+- RULE-SET,ChinaCompanyIp,全球直连
+- GEOIP,CN,全球直连
+- MATCH,漏网之鱼
+rule-providers:
+  lancidr:
+    type: file
+    behavior: ipcidr
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvTG9jYWxBcmVhTmV0d29yay5saXN0
+    path: "./rule_provider/rule-provider_lancidr.yaml"
+    interval: 86400
+  JAV:
+    type: http
+    behavior: classical
+    url: https://gitee.com/syaofox/rule/raw/main/Clash/Provider/JAV.yaml
+    path: "./rule_provider/JAV.yaml"
+    interval: 86400
+  Github:
+    type: file
+    behavior: classical
+    path: "./rule_provider/Github.yaml"
+  DMM:
+    type: file
+    behavior: classical
+    path: "./rule_provider/dmm.yaml"
+  Steam:
+    type: http
+    behavior: classical
+    url: https://gitee.com/syaofox/rule/raw/main/Clash/Provider/Steam.yaml
+    path: "./rule_provider/Steam.yaml"
+    interval: 86400
+  Bilibili:
+    type: http
+    behavior: classical
+    url: https://gitee.com/syaofox/rule/raw/main/Clash/Provider/Media/Bilibili.yaml
+    path: "./rule_provider/Bilibili.yaml"
+    interval: 86400
+  Pornhub:
+    type: http
+    behavior: classical
+    url: https://gitee.com/syaofox/rule/raw/main/Clash/Provider/Media/Pornhub.yaml
+    path: "./rule_provider/Pornhub.yaml"
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://gitee.com/syaofox/rule/raw/main/Clash/Provider/Media/YouTube.yaml
+    path: "./rule_provider/YouTube.yaml"
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://gitee.com/syaofox/rule/raw/main/Clash/Provider/Microsoft.yaml
+    path: "./rule_provider/Microsoft.yaml"
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    url: https://gitee.com/syaofox/rule/raw/main/Clash/Provider/Apple.yaml
+    path: "./rule_provider/Apple.yaml"
+    interval: 86400
+  
+  UnBan:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvVW5CYW4ubGlzdA
+    path: "./rule_provider/rule-provider_UnBan.yaml"
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQmFuQUQubGlzdA
+    path: "./rule_provider/rule-provider_BanAD.yaml"
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQmFuUHJvZ3JhbUFELmxpc3Q
+    path: "./rule_provider/rule-provider_BanProgramAD.yaml"
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvR29vZ2xlQ04ubGlzdA
+    path: "./rule_provider/rule-provider_GoogleCN.yaml"
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvVGVsZWdyYW0ubGlzdA
+    path: "./rule_provider/rule-provider_Telegram.yaml"
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlNZWRpYS5saXN0
+    path: "./rule_provider/rule-provider_ProxyMedia.yaml"
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlMaXRlLmxpc3Q
+    path: "./rule_provider/rule-provider_ProxyLite.yaml"
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQ2hpbmFEb21haW4ubGlzdA
+    path: "./rule_provider/rule-provider_ChinaDomain.yaml"
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQ2hpbmFDb21wYW55SXAubGlzdA
+    path: "./rule_provider/rule-provider_ChinaCompanyIp.yaml"
+    interval: 86400
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  listen: 127.0.0.1:7874
+  fake-ip-filter:
+  - "+.*"
+  default-nameserver:
+  - 192.168.1.1
+  - 114.114.114.114
+  - 119.29.29.29
+  - "[2001:da8::666]:53"
+  nameserver:
+  - 192.168.1.1
+  - dhcp://"eth4"
+  - 114.114.114.114
+  - 119.29.29.29
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  fallback:
+  - https://dns.cloudflare.com/dns-query
+  - "[2001:da8::666]:53"
+  - https://public.dns.iij.jp/dns-query
+  - https://jp.tiar.app/dns-query
+  - https://jp.tiarap.org/dns-query
+  - tls://dot.tiar.app
+redir-port: 7892
+tproxy-port: 7895
+mixed-port: 7893
+secret: '123456'
+bind-address: "*"
+external-ui: "/usr/share/openclash/dashboard"
+ipv6: false
+profile:
+  store-selected: true
+  store-fake-ip: true

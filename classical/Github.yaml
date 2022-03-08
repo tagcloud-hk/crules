@@ -1,0 +1,6 @@
+payload:
+  - DOMAIN-SUFFIX,gitlab.com
+  - DOMAIN-SUFFIX,gitlab.io
+  - DOMAIN-SUFFIX,githubusercontent.com
+  - DOMAIN-SUFFIX,github.com
+  - DOMAIN-SUFFIX,githubassets.com
