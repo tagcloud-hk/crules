@@ -48,6 +48,14 @@ proxy-groups:
   - 全球直连
   - 自动选择
 {{data.proxy_groups}}
+- name: sucklist
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
 - name: bilibili
   type: select
   disable-udp: false
@@ -73,6 +81,14 @@ proxy-groups:
   - 自动选择
 {{data.proxy_groups}}
 - name: youtube
+  type: select
+  disable-udp: false
+  proxies:
+  - 节点选择
+  - 全球直连
+  - 自动选择
+{{data.proxy_groups}}
+- name: google
   type: select
   disable-udp: false
   proxies:
@@ -190,10 +206,12 @@ rules:
 - RULE-SET,private,全球直连
 - RULE-SET,rejectsite,rejectsite
 - RULE-SET,whitelist,whitelist
+- RULE-SET,sucklist,sucklist
 - RULE-SET,bilibili,bilibili
 - RULE-SET,steam,steam
 - RULE-SET,github,github
 - RULE-SET,youtube,youtube
+- RULE-SET,google,google
 - RULE-SET,microsoft,microsoft
 - RULE-SET,dmm,dmm
 - RULE-SET,jav,jav
@@ -257,6 +275,10 @@ rule-providers:
     type: file
     behavior: classical
     path: "./rule_provider/classical/whitelist.yaml"
+  sucklist:
+    type: file
+    behavior: classical
+    path: "./rule_provider/classical/sucklist.yaml"
   bilibili:
     type: file
     behavior: classical
@@ -289,6 +311,10 @@ rule-providers:
     type: file
     behavior: classical
     path: "./rule_provider/classical/youtube.yaml"
+  google:
+    type: file
+    behavior: classical
+    path: "./rule_provider/classical/google.yaml"
   acg:
     type: file
     behavior: classical
