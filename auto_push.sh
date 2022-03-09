@@ -1,5 +1,7 @@
 #!/bin/bash
-git submodule update --remote
+# cd clash-rules
+# git switch release
+# git pull
 
 # classical
 cp clash-rules/applications.txt classical/applications.txt
