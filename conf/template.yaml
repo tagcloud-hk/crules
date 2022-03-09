@@ -210,7 +210,6 @@ proxy-groups:
 rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - RULE-SET,lancidr,全球直连
-- RULE-SET,cncidr,全球直连
 - RULE-SET,private,全球直连
 - RULE-SET,rejectsite,rejectsite
 - RULE-SET,whitelist,whitelist
@@ -233,6 +232,7 @@ rules:
 - RULE-SET,gfw,gfw
 - RULE-SET,greatfire,greatfire
 - RULE-SET,directsite,directsite
+- RULE-SET,cncidr,全球直连
 - GEOIP,CN,全球直连
 - MATCH,漏网之鱼
 rule-providers:
