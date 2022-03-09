@@ -4,8 +4,10 @@ payload:
   - DOMAIN-SUFFIX,hamreus.com
   - DOMAIN-SUFFIX,manhuagui.com
 
+  - DOMAIN-KEYWORD,copymanga
   - DOMAIN-SUFFIX,mangafuna.xyz
-  - DOMAIN-SUFFIX,copymanga.org
+  - DOMAIN-SUFFIX,mangafunc.fun
   - DOMAIN-SUFFIX,sectigo.com
   - DOMAIN-SUFFIX,yourfgjfghkk.club
+  - DOMAIN-SUFFIX,bootcdn.net
   
