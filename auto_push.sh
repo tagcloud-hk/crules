@@ -1,7 +1,9 @@
-#!/bin/bash
-# cd clash-rules
-# git switch release
-# git pull
+!/bin/bash
+cd clash-rules
+git switch release
+git pull
+
+cd ..
 
 # classical
 cp clash-rules/applications.txt classical/applications.txt
