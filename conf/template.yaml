@@ -8,334 +8,293 @@ external-controller: 0.0.0.0:9090
 proxies:
 {{data.proxies}}
 proxy-groups:
-- name: 节点选择
-  type: select
-  proxies:
-  - 自动选择
-  - DIRECT
-{{data.proxy_groups}}
-- name: 自动选择
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  proxies:
-{{data.proxy_groups}}
-- name: 全球直连
+- name: 手动切换
   type: select
   proxies:
   - DIRECT
-  - 节点选择
-  - 自动选择
-- name: 全球拦截
+{{data.proxy_groups}}
+- name: 内网及路由
+  type: select
+  proxies:
+  - DIRECT
+{{data.proxy_groups}}
+- name: 垃圾广告
   type: select
   proxies:
   - REJECT
   - DIRECT
-- name: rejectsite
-  type: select
-  disable-udp: false
-  proxies:
-  - 全球拦截
-  - 节点选择
-  - 全球直连
-  - 自动选择
 {{data.proxy_groups}}
-- name: whitelist
+- name: Suck
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: sucklist
+- name: ACG
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: bilibili
+- name: JPorn
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: steam
+- name: WPorn
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: github
+- name: 游戏平台
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: youtube
+- name: 聊天软件
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: google
+- name: OneDrive
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: social
+- name: 台湾网站
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: microsoft
+- name: YouTube
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: dmm
+- name: Netfilx
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: jav
+- name: TickTok
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: acg
+- name: 日韩媒体
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: pornhub
+- name: 港台媒体
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: applications
+- name: 国外媒体
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: telegramcidr
+- name: 国外网站
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
 {{data.proxy_groups}}
-- name: apple
+- name: 微软服务
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - DIRECT
+  - 手动切换
 {{data.proxy_groups}}
-- name: icloud
+- name: 苹果服务
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - DIRECT
+  - 手动切换
 {{data.proxy_groups}}
-- name: gfw
+- name: 哔哩哔哩
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - DIRECT
+  - 手动切换
 {{data.proxy_groups}}
-- name: greatfire
+- name: 爱奇艺
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - DIRECT
+  - 手动切换
 {{data.proxy_groups}}
-- name: directsite
+- name: 国内网站
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
-{{data.proxy_groups}}
+  - DIRECT
+  - 手动切换
 - name: 漏网之鱼
   type: select
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - DIRECT
+  - 手动切换
 {{data.proxy_groups}}
 rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- RULE-SET,lancidr,全球直连
-- RULE-SET,private,全球直连
-- RULE-SET,rejectsite,rejectsite
-- RULE-SET,whitelist,whitelist
-- RULE-SET,sucklist,sucklist
-- RULE-SET,bilibili,bilibili
-- RULE-SET,steam,steam
-- RULE-SET,github,github
-- RULE-SET,youtube,youtube
-- RULE-SET,google,google
-- RULE-SET,social,social
-- RULE-SET,microsoft,microsoft
-- RULE-SET,dmm,dmm
-- RULE-SET,jav,jav
-- RULE-SET,acg,acg
-- RULE-SET,pornhub,pornhub
-- RULE-SET,applications,applications
-- RULE-SET,telegramcidr,telegramcidr
-- RULE-SET,apple,apple
-- RULE-SET,icloud,icloud
-- RULE-SET,gfw,gfw
-- RULE-SET,greatfire,greatfire
-- RULE-SET,directsite,directsite
-- RULE-SET,cncidr,全球直连
-- GEOIP,CN,全球直连
+- DOMAIN-SUFFIX,awesome-hd.me,DIRECT
+- DOMAIN-SUFFIX,broadcasthe.net,DIRECT
+- DOMAIN-SUFFIX,chdbits.co,DIRECT
+- DOMAIN-SUFFIX,classix-unlimited.co.uk,DIRECT
+- DOMAIN-SUFFIX,empornium.me,DIRECT
+- DOMAIN-SUFFIX,gazellegames.net,DIRECT
+- DOMAIN-SUFFIX,hdchina.org,DIRECT
+- DOMAIN-SUFFIX,hdsky.me,DIRECT
+- DOMAIN-SUFFIX,icetorrent.org,DIRECT
+- DOMAIN-SUFFIX,jpopsuki.eu,DIRECT
+- DOMAIN-SUFFIX,icetorrent.org,DIRECT
+- DOMAIN-SUFFIX,keepfrds.com,DIRECT
+- DOMAIN-SUFFIX,madsrevolution.net,DIRECT
+- DOMAIN-SUFFIX,m-team.cc,DIRECT
+- DOMAIN-SUFFIX,nanyangpt.com,DIRECT
+- DOMAIN-SUFFIX,ncore.cc,DIRECT
+- DOMAIN-SUFFIX,open.cd,DIRECT
+- DOMAIN-SUFFIX,ourbits.club,DIRECT
+- DOMAIN-SUFFIX,passthepopcorn.me,DIRECT
+- DOMAIN-SUFFIX,privatehd.to,DIRECT
+- DOMAIN-SUFFIX,redacted.ch,DIRECT
+- DOMAIN-SUFFIX,springsunday.net,DIRECT
+- DOMAIN-SUFFIX,tjupt.org,DIRECT
+- DOMAIN-SUFFIX,totheglory.im,DIRECT
+- DOMAIN-KEYWORD,announce,DIRECT
+- DOMAIN-KEYWORD,torrent,DIRECT
+- DOMAIN-KEYWORD,tracker,DIRECT
+- DOMAIN,newsubscribe.tagonline.asia,DIRECT
+- RULE-SET,内网及路由,内网及路由
+- RULE-SET,垃圾广告,垃圾广告
+- RULE-SET,Suck,Suck
+- RULE-SET,ACG,ACG
+- RULE-SET,JPorn,JPorn
+- RULE-SET,WPorn,WPorn
+- RULE-SET,游戏平台,游戏平台
+- RULE-SET,聊天软件,聊天软件
+- RULE-SET,OneDrive,OneDrive
+- RULE-SET,YouTube,YouTube
+- RULE-SET,Netfilx,Netfilx
+- RULE-SET,TickTok,TickTok
+- RULE-SET,日韩媒体,日韩媒体
+- RULE-SET,港台媒体,港台媒体
+- RULE-SET,国外媒体,国外媒体
+- RULE-SET,国外网站,国外网站
+- RULE-SET,微软服务,微软服务
+- RULE-SET,苹果服务,苹果服务
+- RULE-SET,台湾网站,台湾网站
+- RULE-SET,哔哩哔哩,哔哩哔哩
+- RULE-SET,爱奇艺,爱奇艺
+- GEOIP,CN,国内网站
 - DST-PORT,80,漏网之鱼
 - DST-PORT,443,漏网之鱼
 - DST-PORT,22,漏网之鱼
 - MATCH,DIRECT
 rule-providers:
-  lancidr:
-    type: file
-    behavior: ipcidr
-    path: "./rule_provider/ipcidr/lancidr.txt"
-  cncidr:
-    type: file
-    behavior: ipcidr
-    path: "./rule_provider/ipcidr/cncidr.txt"
-  private:
-    type: file
-    behavior: domain
-    path: "./rule_provider/domain/private.txt"
-  telegramcidr:
-    type: file
-    behavior: ipcidr
-    path: "./rule_provider/ipcidr/telegramcidr.txt"  
-  rejectsite:
-    type: file
-    behavior: domain
-    path: "./rule_provider/domain/reject.txt"
-  directsite:
-    type: file
-    behavior: domain
-    path: "./rule_provider/domain/direct.txt"
-  apple:
-    type: file
-    behavior: domain
-    path: "./rule_provider/domain/apple.txt"
-  icloud:
-    type: file
-    behavior: domain
-    path: "./rule_provider/domain/icloud.txt"
-  gfw:
-    type: file
-    behavior: domain
-    path: "./rule_provider/domain/gfw.txt"
-  greatfire:
-    type: file
-    behavior: domain
-    path: "./rule_provider/domain/greatfire.txt"
-  applications:
+  内网及路由:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/applications.txt"
-  whitelist:
+    path: "./rule_provider/localnet.yaml"
+  垃圾广告:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/whitelist.yaml"
-  sucklist:
+    path: "./rule_provider/ads.yaml"
+  Suck:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/sucklist.yaml"
-  bilibili:
+    path: "./rule_provider/suck.yaml"
+  ACG:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/bilibili.yaml"
-  dmm:
+    path: "./rule_provider/acg.yaml"
+  JPorn:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/dmm.yaml"
-  github:
+    path: "./rule_provider/jporn.yaml"
+  WPorn:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/github.yaml"
-  jav:
+    path: "./rule_provider/wporn.yaml"
+  游戏平台:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/jav.yaml"
-  microsoft:
+    path: "./rule_provider/games.yaml"
+  聊天软件:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/microsoft.yaml"
-  pornhub:
+    path: "./rule_provider/chats.yaml"
+  OneDrive:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/pornhub.yaml"
-  steam:
+    path: "./rule_provider/onedrive.yaml"
+  台湾网站:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/steam.yaml"
-  youtube:
+    path: "./rule_provider/tw.yaml"
+  YouTube:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/youtube.yaml"
-  google:
+    path: "./rule_provider/youtube.yaml"
+  Netfilx:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/google.yaml"
-  social:
+    path: "./rule_provider/netflix.yaml"
+  TickTok:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/social.yaml"
-  acg:
+    path: "./rule_provider/ticktok.yaml"
+  日韩媒体:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/acg.yaml"
-  
+    path: "./rule_provider/jk.yaml"
+  港台媒体:
+    type: file
+    behavior: classical
+    path: "./rule_provider/hk.yaml"
+  国外媒体:
+    type: file
+    behavior: classical
+    path: "./rule_provider/gw.yaml"
+  微软服务:
+    type: file
+    behavior: classical
+    path: "./rule_provider/microsoft.yaml"
+  苹果服务:
+    type: file
+    behavior: classical
+    path: "./rule_provider/apple.yaml"
+  国外网站:
+    type: file
+    behavior: classical
+    path: "./rule_provider/gwwebsite.yaml"
+  哔哩哔哩:
+    type: file
+    behavior: classical
+    path: "./rule_provider/bilibili.yaml"
+  爱奇艺:
+    type: file
+    behavior: classical
+    path: "./rule_provider/aiqiyi.yaml"
+
+  国内网站:
+    type: file
+    behavior: classical
+    path: "./rule_provider/cn.yaml"
 dns:
   nameserver:
   - 192.168.1.1

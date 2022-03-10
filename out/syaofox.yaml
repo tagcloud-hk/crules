@@ -1256,10 +1256,9 @@ proxies:
   password: dd8fd801-7dea-4b31-829d-82d143001a75
   udp: true
 proxy-groups:
-- name: 节点选择
+- name: 手动切换
   type: select
   proxies:
-  - 自动选择
   - DIRECT
   - lisa-US
   - 香港 01丨1x HK
@@ -1439,11 +1438,10 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: 自动选择
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
+- name: 内网及路由
+  type: select
   proxies:
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -1622,25 +1620,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: 全球直连
-  type: select
-  proxies:
-  - DIRECT
-  - 节点选择
-  - 自动选择
-- name: 全球拦截
+- name: 垃圾广告
   type: select
   proxies:
   - REJECT
   - DIRECT
-- name: rejectsite
-  type: select
-  disable-udp: false
-  proxies:
-  - 全球拦截
-  - 节点选择
-  - 全球直连
-  - 自动选择
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -1819,13 +1803,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: whitelist
+- name: Suck
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -2004,13 +1986,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: sucklist
+- name: ACG
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -2189,13 +2169,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: bilibili
+- name: JPorn
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -2374,13 +2352,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: steam
+- name: WPorn
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -2559,13 +2535,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: github
+- name: 游戏平台
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -2744,13 +2718,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: youtube
+- name: 聊天软件
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -2929,13 +2901,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: google
+- name: OneDrive
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -3114,13 +3084,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: social
+- name: 台湾网站
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -3299,13 +3267,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: microsoft
+- name: YouTube
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -3484,13 +3450,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: dmm
+- name: Netfilx
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -3669,13 +3633,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: jav
+- name: TickTok
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -3854,13 +3816,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: acg
+- name: 日韩媒体
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -4039,13 +3999,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: pornhub
+- name: 港台媒体
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -4224,13 +4182,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: applications
+- name: 国外媒体
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -4409,13 +4365,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: telegramcidr
+- name: 国外网站
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - 手动切换
+  - DIRECT
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -4594,13 +4548,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: apple
+- name: 微软服务
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - DIRECT
+  - 手动切换
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -4779,13 +4731,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: icloud
+- name: 苹果服务
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - DIRECT
+  - 手动切换
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -4964,13 +4914,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: gfw
+- name: 哔哩哔哩
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - DIRECT
+  - 手动切换
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -5149,13 +5097,11 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: greatfire
+- name: 爱奇艺
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - DIRECT
+  - 手动切换
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -5334,197 +5280,16 @@ proxy-groups:
   - 突尼斯丨2x TN
   - 肯尼亚丨1x KE
   - 尼日利亚丨2x NG
-- name: directsite
+- name: 国内网站
   type: select
-  disable-udp: false
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
-  - lisa-US
-  - 香港 01丨1x HK
-  - 香港 02丨1x HK
-  - 香港 03丨1x HK
-  - 香港 04丨1x HK
-  - 香港 05丨1x HK
-  - 香港 06丨1x HK
-  - 香港 07丨1x HK
-  - 香港 08丨1x HK
-  - 香港 09丨1x HK
-  - 香港 10丨1x HK
-  - 香港 11丨1x HK
-  - 香港 12丨1x HK
-  - 香港 13丨1x HK
-  - 香港 14丨1x HK
-  - 香港家宽丨1x HK
-  - 澳门商宽丨2x MO
-  - 澳门家宽丨3x MO
-  - 台湾 01丨1x TW
-  - 台湾 02丨1x TW
-  - 台湾 03丨1x TW
-  - 台湾 04丨1x TW
-  - 台湾 05丨1x TW
-  - 台湾 06丨1x TW
-  - 台湾 07丨1x TW
-  - 台湾 08丨1x TW
-  - 台湾 09丨1x TW
-  - 台湾 10丨1x TW
-  - 台湾 11丨1x TW
-  - 台湾 12丨1x TW
-  - 台湾 13丨1x TW
-  - 台湾 14丨1x TW
-  - 台湾 15丨1x TW
-  - 台湾 16丨1x TW
-  - 新加坡 01丨1x SG
-  - 新加坡 02丨1x SG
-  - 新加坡 03丨1x SG
-  - 新加坡 04丨1x SG
-  - 新加坡 05丨1x SG
-  - 新加坡 06丨1x SG
-  - 新加坡 07丨1x SG
-  - 新加坡 08丨1x SG
-  - 新加坡 09丨1x SG
-  - 新加坡 10丨1x SG
-  - 新加坡 11丨2x SG
-  - 新加坡 12丨3x SG
-  - 新加坡商宽丨3x SG
-  - 新加坡家宽丨3x SG
-  - 马来西亚 01丨1x MY
-  - 马来西亚 02丨1x MY
-  - 马来西亚 03丨1x MY
-  - 马来西亚 04丨1x MY
-  - 马来西亚 05丨1x MY
-  - 马来西亚家宽丨3x MY
-  - 泰国 01丨3x TH
-  - 泰国 02丨3x TH
-  - 日本 01丨1x JP
-  - 日本 02丨1x JP
-  - 日本 03丨1x JP
-  - 日本 04丨1x JP
-  - 日本 05丨1x JP
-  - 日本 06丨1x JP
-  - 日本 07丨1x JP
-  - 日本 08丨1x JP
-  - 日本 09丨1x JP
-  - 日本 10丨1x JP
-  - 日本 11丨2x JP
-  - 日本 12丨1x JP
-  - 日本 13丨1x JP
-  - 日本 14丨3x JP
-  - 日本 15丨3x JP
-  - 日本 16丨3x JP
-  - 日本 17丨3x JP
-  - 韩国 01丨3x KR
-  - 韩国 02丨3x KR
-  - 韩国 03丨3x KR
-  - 韩国 04丨3x KR
-  - 韩国 05丨1x KR
-  - 越南丨1x VN
-  - 越南家宽丨3x VN
-  - 菲律宾 01丨1x PH
-  - 菲律宾 02丨1x PH
-  - 印度尼西亚-棉兰丨1x ID
-  - 印度尼西亚-雅加达丨1x ID
-  - 柬埔寨丨3x KH
-  - 印度-孟买丨1x IN
-  - 印度-新德里丨1x IN
-  - 蒙古丨1x MN
-  - 约旦丨2x JO
-  - 伊朗丨5x IR
-  - 以色列丨1x IL
-  - 土耳其丨1x TR
-  - 尼泊尔丨1x NP
-  - 孟加拉丨2x BD
-  - 阿联酋丨3x AE
-  - 阿塞拜疆丨1x AZ
-  - 格鲁吉亚丨1x GE
-  - 巴基斯坦 01丨5x PK
-  - 巴基斯坦 02丨5x PK
-  - 沙特阿拉伯丨3x SA
-  - 哈萨克斯坦丨1x KZ
-  - 吉尔吉斯斯坦丨1x KG
-  - 澳大利亚-悉尼丨2x AU
-  - 澳大利亚-布里斯班丨2x AU
-  - 新西兰丨3x NZ
-  - 法国丨1x FR
-  - 英国 01丨1x GB
-  - 英国 02丨1x GB
-  - 英国家宽丨3x GB
-  - 马恩岛丨2x IM
-  - 德国 01丨1x DE
-  - 德国 02丨1x DE
-  - 丹麦丨1x DK
-  - 挪威丨1x NO
-  - 瑞典丨1x SE
-  - 芬兰丨2x FI
-  - 冰岛丨2x IS
-  - 瑞士丨2x CH
-  - 捷克丨1x CZ
-  - 希腊丨2x GR
-  - 荷兰丨1x NL
-  - 波兰丨1x PL
-  - 俄罗斯-莫斯科丨1x RU
-  - 俄罗斯-库页岛丨1x RU
-  - 乌克兰丨1x UA
-  - 匈牙利丨1x HU
-  - 卢森堡丨2x LU
-  - 奥地利丨2x AT
-  - 意大利丨1x IT
-  - 比利时丨1x BE
-  - 爱尔兰丨2x IE
-  - 立陶宛丨1x LT
-  - 西班牙丨1x ES
-  - 葡萄牙丨1x PT
-  - 保加利亚丨1x BG
-  - 克罗地亚丨2x HR
-  - 北马其顿丨2x MK
-  - 塞尔维亚丨2x RS
-  - 塞浦路斯丨1x CY
-  - 拉脱维亚丨1x LV
-  - 摩尔多瓦丨2x MD
-  - 斯洛伐克丨1x SK
-  - 爱沙尼亚丨1x EE
-  - 白俄罗斯丨2x BY
-  - 罗马尼亚丨1x RO
-  - 斯洛文尼亚丨2x SI
-  - 阿尔巴尼亚丨1x AL
-  - 波黑共和国丨2x BA
-  - 美国 01 费城丨1x US
-  - 美国 02 纽约丨1x US
-  - 美国 03 芝加哥丨1x US
-  - 美国 04 圣何塞丨1x US
-  - 美国 05 迈阿密丨1x US
-  - 美国 06 斯波坎丨1x US
-  - 美国 07 达拉斯丨1x US
-  - 美国 08 底特律丨1x US
-  - 美国 09 密尔沃基丨1x US
-  - 美国 10 圣克拉拉丨1x US
-  - 加拿大 01 多伦多丨1x CA
-  - 加拿大 02 温哥华丨2x CA
-  - 加拿大 03 哈利法克斯丨1x CA
-  - 加拿大家宽丨3x CA
-  - 墨西哥丨3x MX
-  - 巴拿马丨3x PA
-  - 哥斯达黎加丨2x CR
-  - 巴西丨1x BR
-  - 智利丨2x CL
-  - 秘鲁丨2x PE
-  - 阿根廷丨5x AR
-  - 乌拉圭丨2x UY
-  - 哥伦比亚丨1x CO
-  - 委内瑞拉丨3x VE
-  - 埃及丨3x EG
-  - 南非丨1x ZA
-  - 摩洛哥丨2x MA
-  - 突尼斯丨2x TN
-  - 肯尼亚丨1x KE
-  - 尼日利亚丨2x NG
+  - DIRECT
+  - 手动切换
 - name: 漏网之鱼
   type: select
   proxies:
-  - 节点选择
-  - 全球直连
-  - 自动选择
+  - DIRECT
+  - 手动切换
   - lisa-US
   - 香港 01丨1x HK
   - 香港 02丨1x HK
@@ -5705,133 +5470,150 @@ proxy-groups:
   - 尼日利亚丨2x NG
 rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- RULE-SET,lancidr,全球直连
-- RULE-SET,private,全球直连
-- RULE-SET,rejectsite,rejectsite
-- RULE-SET,whitelist,whitelist
-- RULE-SET,sucklist,sucklist
-- RULE-SET,bilibili,bilibili
-- RULE-SET,steam,steam
-- RULE-SET,github,github
-- RULE-SET,youtube,youtube
-- RULE-SET,google,google
-- RULE-SET,social,social
-- RULE-SET,microsoft,microsoft
-- RULE-SET,dmm,dmm
-- RULE-SET,jav,jav
-- RULE-SET,acg,acg
-- RULE-SET,pornhub,pornhub
-- RULE-SET,applications,applications
-- RULE-SET,telegramcidr,telegramcidr
-- RULE-SET,apple,apple
-- RULE-SET,icloud,icloud
-- RULE-SET,gfw,gfw
-- RULE-SET,greatfire,greatfire
-- RULE-SET,directsite,directsite
-- RULE-SET,cncidr,全球直连
-- GEOIP,CN,全球直连
+- DOMAIN-SUFFIX,awesome-hd.me,DIRECT
+- DOMAIN-SUFFIX,broadcasthe.net,DIRECT
+- DOMAIN-SUFFIX,chdbits.co,DIRECT
+- DOMAIN-SUFFIX,classix-unlimited.co.uk,DIRECT
+- DOMAIN-SUFFIX,empornium.me,DIRECT
+- DOMAIN-SUFFIX,gazellegames.net,DIRECT
+- DOMAIN-SUFFIX,hdchina.org,DIRECT
+- DOMAIN-SUFFIX,hdsky.me,DIRECT
+- DOMAIN-SUFFIX,icetorrent.org,DIRECT
+- DOMAIN-SUFFIX,jpopsuki.eu,DIRECT
+- DOMAIN-SUFFIX,icetorrent.org,DIRECT
+- DOMAIN-SUFFIX,keepfrds.com,DIRECT
+- DOMAIN-SUFFIX,madsrevolution.net,DIRECT
+- DOMAIN-SUFFIX,m-team.cc,DIRECT
+- DOMAIN-SUFFIX,nanyangpt.com,DIRECT
+- DOMAIN-SUFFIX,ncore.cc,DIRECT
+- DOMAIN-SUFFIX,open.cd,DIRECT
+- DOMAIN-SUFFIX,ourbits.club,DIRECT
+- DOMAIN-SUFFIX,passthepopcorn.me,DIRECT
+- DOMAIN-SUFFIX,privatehd.to,DIRECT
+- DOMAIN-SUFFIX,redacted.ch,DIRECT
+- DOMAIN-SUFFIX,springsunday.net,DIRECT
+- DOMAIN-SUFFIX,tjupt.org,DIRECT
+- DOMAIN-SUFFIX,totheglory.im,DIRECT
+- DOMAIN-KEYWORD,announce,DIRECT
+- DOMAIN-KEYWORD,torrent,DIRECT
+- DOMAIN-KEYWORD,tracker,DIRECT
+- DOMAIN,newsubscribe.tagonline.asia,DIRECT
+- RULE-SET,内网及路由,内网及路由
+- RULE-SET,垃圾广告,垃圾广告
+- RULE-SET,Suck,Suck
+- RULE-SET,ACG,ACG
+- RULE-SET,JPorn,JPorn
+- RULE-SET,WPorn,WPorn
+- RULE-SET,游戏平台,游戏平台
+- RULE-SET,聊天软件,聊天软件
+- RULE-SET,OneDrive,OneDrive
+- RULE-SET,YouTube,YouTube
+- RULE-SET,Netfilx,Netfilx
+- RULE-SET,TickTok,TickTok
+- RULE-SET,日韩媒体,日韩媒体
+- RULE-SET,港台媒体,港台媒体
+- RULE-SET,国外媒体,国外媒体
+- RULE-SET,国外网站,国外网站
+- RULE-SET,微软服务,微软服务
+- RULE-SET,苹果服务,苹果服务
+- RULE-SET,台湾网站,台湾网站
+- RULE-SET,哔哩哔哩,哔哩哔哩
+- RULE-SET,爱奇艺,爱奇艺
+- GEOIP,CN,国内网站
 - DST-PORT,80,漏网之鱼
 - DST-PORT,443,漏网之鱼
 - DST-PORT,22,漏网之鱼
 - MATCH,DIRECT
 rule-providers:
-  lancidr:
-    type: file
-    behavior: ipcidr
-    path: "./rule_provider/ipcidr/lancidr.txt"
-  cncidr:
-    type: file
-    behavior: ipcidr
-    path: "./rule_provider/ipcidr/cncidr.txt"
-  private:
-    type: file
-    behavior: domain
-    path: "./rule_provider/domain/private.txt"
-  telegramcidr:
-    type: file
-    behavior: ipcidr
-    path: "./rule_provider/ipcidr/telegramcidr.txt"  
-  rejectsite:
-    type: file
-    behavior: domain
-    path: "./rule_provider/domain/reject.txt"
-  directsite:
-    type: file
-    behavior: domain
-    path: "./rule_provider/domain/direct.txt"
-  apple:
-    type: file
-    behavior: domain
-    path: "./rule_provider/domain/apple.txt"
-  icloud:
-    type: file
-    behavior: domain
-    path: "./rule_provider/domain/icloud.txt"
-  gfw:
-    type: file
-    behavior: domain
-    path: "./rule_provider/domain/gfw.txt"
-  greatfire:
-    type: file
-    behavior: domain
-    path: "./rule_provider/domain/greatfire.txt"
-  applications:
+  内网及路由:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/applications.txt"
-  whitelist:
+    path: "./rule_provider/localnet.yaml"
+  垃圾广告:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/whitelist.yaml"
-  sucklist:
+    path: "./rule_provider/ads.yaml"
+  Suck:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/sucklist.yaml"
-  bilibili:
+    path: "./rule_provider/suck.yaml"
+  ACG:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/bilibili.yaml"
-  dmm:
+    path: "./rule_provider/acg.yaml"
+  JPorn:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/dmm.yaml"
-  github:
+    path: "./rule_provider/jporn.yaml"
+  WPorn:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/github.yaml"
-  jav:
+    path: "./rule_provider/wporn.yaml"
+  游戏平台:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/jav.yaml"
-  microsoft:
+    path: "./rule_provider/games.yaml"
+  聊天软件:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/microsoft.yaml"
-  pornhub:
+    path: "./rule_provider/chats.yaml"
+  OneDrive:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/pornhub.yaml"
-  steam:
+    path: "./rule_provider/onedrive.yaml"
+  台湾网站:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/steam.yaml"
-  youtube:
+    path: "./rule_provider/tw.yaml"
+  YouTube:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/youtube.yaml"
-  google:
+    path: "./rule_provider/youtube.yaml"
+  Netfilx:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/google.yaml"
-  social:
+    path: "./rule_provider/netflix.yaml"
+  TickTok:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/social.yaml"
-  acg:
+    path: "./rule_provider/ticktok.yaml"
+  日韩媒体:
     type: file
     behavior: classical
-    path: "./rule_provider/classical/acg.yaml"
-  
+    path: "./rule_provider/jk.yaml"
+  港台媒体:
+    type: file
+    behavior: classical
+    path: "./rule_provider/hk.yaml"
+  国外媒体:
+    type: file
+    behavior: classical
+    path: "./rule_provider/gw.yaml"
+  微软服务:
+    type: file
+    behavior: classical
+    path: "./rule_provider/microsoft.yaml"
+  苹果服务:
+    type: file
+    behavior: classical
+    path: "./rule_provider/apple.yaml"
+  国外网站:
+    type: file
+    behavior: classical
+    path: "./rule_provider/gwwebsite.yaml"
+  哔哩哔哩:
+    type: file
+    behavior: classical
+    path: "./rule_provider/bilibili.yaml"
+  爱奇艺:
+    type: file
+    behavior: classical
+    path: "./rule_provider/aiqiyi.yaml"
+
+  国内网站:
+    type: file
+    behavior: classical
+    path: "./rule_provider/cn.yaml"
 dns:
   nameserver:
   - 192.168.1.1
