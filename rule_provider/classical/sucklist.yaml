@@ -1,6 +1,10 @@
 payload:
+  - DOMAIN-SUFFIX,msftconnecttest.com
+  - DOMAIN-SUFFIX,msftncsi.com
   - DOMAIN-SUFFIX,bisi888.cc
   - DOMAIN-SUFFIX,bisicdn.xyz         
   - DOMAIN-SUFFIX,downloadhelper.net
   - DOMAIN-SUFFIX,jsdelivr.net
   - DOMAIN-SUFFIX,freedownloadmanager.org
+  - DOMAIN-SUFFIX,pypi.org
+  - DOMAIN-SUFFIX,pythonhosted.org

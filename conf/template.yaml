@@ -334,6 +334,20 @@ rule-providers:
     path: "./rule_provider/classical/acg.yaml"
   
 dns:
+  nameserver:
+  - 192.168.1.1
+  - dhcp://"eth4"
+  - 114.114.114.114
+  - 119.29.29.29
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  fallback:
+  - https://dns.cloudflare.com/dns-query
+  - "[2001:da8::666]:53"
+  - https://public.dns.iij.jp/dns-query
+  - https://jp.tiar.app/dns-query
+  - https://jp.tiarap.org/dns-query
+  - tls://dot.tiar.app
   enable: true
   ipv6: false
   enhanced-mode: fake-ip
@@ -346,14 +360,6 @@ dns:
   - 114.114.114.114
   - 119.29.29.29
   - "[2001:da8::666]:53"
-  nameserver:
-  - 192.168.1.1
-  - dhcp://"eth4"
-  - 114.114.114.114
-  - 119.29.29.29
-  fallback:
-  - "[2001:da8::666]:53"
-  - tls://dot.tiar.app
 redir-port: 7892
 tproxy-port: 7895
 mixed-port: 7893
@@ -361,6 +367,12 @@ secret: '123456'
 bind-address: "*"
 external-ui: "/usr/share/openclash/dashboard"
 ipv6: false
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+  - tcp://8.8.8.8:53
+  - tcp://8.8.4.4:53
 profile:
   store-selected: true
   store-fake-ip: true

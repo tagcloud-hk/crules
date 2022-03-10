@@ -33,6 +33,8 @@ cp clash-rules/tld-not-cn.txt rule_provider/domain/tld-not-cn.txt
 
 scp -r rule_provider/* root@openwrt:/etc/openclash/rule_provider/
 
-git add .
-git commit -m "auto push"
-git push origin --all
+if [ "$1"="push" ]; then
+    git add .
+    git commit -m "auto push"
+    git push origin --all
+fi
